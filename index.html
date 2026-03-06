@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--información útil para la página web-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- información útil para tener un buen SEO-->
+    <meta name="description" content="Portafolio Personal de Rodrigo García">
+    <meta name="keywords" content="portafolio, sobre mí, contacto, proyectos, CSS, HTML, programación">
+    <meta name="author" content="Rodrigo García Sánchez">
+    <link rel="icon" type="image/x-icon" href="./img/faviconCircular.png">
+
+    <!--título de la página web-->
+    <title>Portafolio Personal</title>
+
+    <!--se importan los archivos 'style.css' y 'main.js'-->
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h2 class="header-title">
+            Portafolio Personal de <span>Rodrigo García Sánchez</span>
+        </h2>
+
+        <nav class="nav">
+            <button id="btnInicio" type="button" class="nav-item">
+                <img src="./img/header/inicio.png" alt="Inicio">
+                <span>Inicio</span>
+            </button>
+
+            <button id="btnSobreMi" type="button" class="nav-item">
+                <img src="./img/header/sobreMi.png" alt="Sobre Mí">
+                <span>Sobre Mí</span>
+            </button>
+
+            <button id="btnProyectos" type="button" class="nav-item">
+                <img src="./img/header/proyectos.png" alt="Proyectos">
+                <span>Proyectos</span>
+            </button>
+
+            <button id="btnContacto" type="button" class="nav-item">
+                <img src="./img/header/contacto.png" alt="Contacto">
+                <span>Contacto</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="heroSection" class="hero">
+                <h1>
+                    Bienvenidos al
+                    <span class="hero-h1-span">Portafolio Personal</span>
+                </h1>
+                <h2>Conocimiento básico en los <span>siguientes lenguajes</span></h2>
+                <div class="divLenguajes">
+                    <div id="lenguajeJava" class="lenguajes">
+                        <div>
+                            <img src="img/main/heroSection/java.png" alt="Lenguaje Java">
+                        </div>
+                        <h3>Java</h3>
+                        <p>
+                            Mi primer lenguaje y uno de mis favoritos. Con él aprendí a estructurar
+                            aplicaciones sólidas y a pensar soluciones.
+                        </p>
+                    </div>
+
+                    <div id="lenguajePython" class="lenguajes">
+                        <div>
+                            <img src="img/main/heroSection/python.png" alt="Lenguaje Python">
+                        </div>
+                        <h3>Python</h3>
+                        <p>
+                            Lo uso para automatización y scripting. Ideal para trabajar con redes,
+                            IPs y tareas orientadas a ciberseguridad.
+                        </p>
+                    </div>
+
+                    <div id="lenguajeC" class="lenguajes">
+                        <div>
+                            <img src="img/main/heroSection/c.png" alt="Lenguaje Java">
+                        </div>
+                        <h3>C</h3>
+                        <p>
+                            El lenguaje del control real. Permite entender memoria, hardware y programar
+                            microcontroladores como Arduino.
+                        </p>
+                    </div>
+
+                    <div id="lenguajeJavaScript" class="lenguajes">
+                        <div>
+                            <img src="img/main/heroSection/javaScript.png" alt="Lenguaje JavaScript">
+                        </div>
+                        <h3>JavaScript</h3>
+                        <p>
+                            Fundamental en desarrollo web. Conecta servidor y navegador para crear
+                            aplicaciones dinámicas.
+                        </p>
+                    </div>
+                </div>
+        </section>
+
+        <section id="sobreMi" class="sobreMi">
+            <h2>Sobre Mí</h2>
+            <div class="divFotos">
+                <article class="articleUfc">
+                    <img src="img/main/sobreMi/ufcBelt.JPG" alt="Imagen sosteniendo un cinturón de la UFC">
+                    <h3>Hobbies</h3>
+                    <textarea>Tengo varios hobbies pero una de las cosas que más me gusta (y está muy relacionada con lo que entreno) es ver la UFC y los deportes de combate, porque a parte de entretenerme me parace que transmite unos valores que debo seguir.</textarea>
+                </article>
+
+                <article class="articleAtletismo">
+                    <h3>Deporte</h3>
+                    <textarea>El deporte siempre ha sido una parte esencial de mi vida, actualmente hago grappling especializándome en jiujitsu y lucha. Cuándo me da tiempo me gusta salir a correr y entrenar fuerza en el gimnasio o haciendo calistenia.</textarea>
+                    <img src="img/main/sobreMi/pistaAtletismo.PNG" alt="Imagen corriendo en una pista de atletismo">
+                </article>
+
+                <article class="article42madrid">
+                    <img src="img/main/sobreMi/42madrid.jpg" alt="Imagen en 42 Madrid">
+                    <h3>42 Madrid</h3>
+                    <textarea>También me encanta programar, y lo hago por mi cuenta, es por eso que he decidido formar parte del proyecto 42 Madrid para tener una buena comprensión de la programación y aprender C con algunos amigos.</textarea>
+                </article>
+            </div>
+        </section>
+
+        <section id="proyectos" class="proyectos">
+            <h2>Proyectos</h2>
+            <p>
+                <span>Nota:</span> Todos estos proyectos son ficticios aunque me gustaría desarrollarlos
+                en un futuro. Pero por el momento enlazan al repositorio de este portafolio.
+            </p>
+            <ul class="listaProyectos">
+                <li>
+                    <h3>Portafolio Personal</h3>
+                    <a href="https://github.com/rodrii-garciia/Master-Proyecto-1">
+                        <img src="img/main/portafolio/portafolioPersonal.png" alt="Imagen Portafolio Personal">
+                    </a>
+                </li>
+
+                <li>
+                    <h3>Tienda Online</h3>
+                    <a href="https://github.com/rodrii-garciia/Master-Proyecto-1">
+                        <img src="img/main/portafolio/tiendaOnline.png" alt="Imagen Tienda Online">
+                    </a>
+                </li>
+
+                <li>
+                    <h3>Portabilidad de proyectos</h3>
+                    <a href="https://github.com/rodrii-garciia/Master-Proyecto-1">
+                        <img src="img/main/portafolio/portabilidad.png" alt="Imagen de un .bat">
+                    </a>
+                </li>
+
+                <li>
+                    <h3>Página web Lambda Club</h3>
+                    <a href="https://github.com/rodrii-garciia/Master-Proyecto-1">
+                        <img src="img/main/portafolio/lambdaClub.jpeg" alt="Imagen de la web Lambda Club">
+                    </a>
+                </li>
+
+                <li>
+                    <h3>Mod de minecraft</h3>
+                    <a href="https://github.com/rodrii-garciia/Master-Proyecto-1">
+                        <img src="img/main/portafolio/modMinecraft.png" alt="Imagen de un mod de Minecraft">
+                    </a>
+                </li>
+
+                <li>
+                    <h3>Biblioteca (Java Spring boot)</h3>
+                    <a href="https://github.com/rodrii-garciia/Master-Proyecto-1">
+                        <img src="img/main/portafolio/bibliotecaSpring.png" alt="Imagen de biblioteca (springboot)">
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>Contacta conmigo</h2>
+            <form class="formularioContacto">
+                <label for="nombre" class="labelContacto">¿Cuál es tu nombre?</label>
+                <input type="text" id="nombre" placeholder="Ej: Rodrigo" class="inputContacto" required maxlength="50">
+
+                <label for="prApellido" class="labelContacto">¿Cuál es tu primer apellido?</label>
+                <input type="text" id="prApellido" placeholder="Ej: García" class="inputContacto" required maxlength="50">
+
+                <label for="sgApellido" class="labelContacto">¿Cuál es tu segundo apellido?</label>
+                <input type="text" id="sgApellido" placeholder="Ej: Sánchez" class="inputContacto" required maxlength="50">
+
+                <label for="email" class="labelContacto">¿Cuál es tu email de contacto?</label>
+                <input type="email" name="email" id="email" placeholder="Ej: rodrigogarciasanchez2007@gmail.com" class="inputContacto" required maxlength="50">
+
+                <label for="comentario" class="labelContacto">¿Por qué deseas contactarme?</label>
+                <textarea id="comentario" rows="5" placeholder="Ingresa tu comentario aquí..." class="inputContacto textArea" required maxlength="650"></textarea>
+
+                <button type="button" id="btnEnviar">Enviar datos</button>
+            </form>
+
+            <section id="ventanaEmergente">
+                <h2>¡Gracias por contactarme!</h2>
+                <h3>Información que se ha enviado:</h3>
+                <div>
+                    <label>Nombre:</label>
+                    <p id="infoNombre"></p>
+
+                    <label>Primer apellido:</label>
+                    <p id="infoPrApellido"></p>
+
+                    <label>Segundo apellido:</label>
+                    <p id="infoSgApellido"></p>
+
+                    <label>Email:</label>
+                    <p id="infoEmail"></p>
+
+                    <label for="infoComentario">Comentario:</label>
+                    <textarea id="infoComentario"></textarea>
+                </div>
+                <button id="btnCerrar">Cerrar</button>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="sectionSocial">
+            <a class="footer-social" href="https://www.youtube.com/@rodriigo.garciia" target="_blank">
+                <img src="./img/footer/youtube.png" alt="YouTube">
+            </a>
+
+            <a class="footer-social" href="https://www.instagram.com/rodriigo__garciia/" target="_blank">
+                <img src="./img/footer/instagram.png" alt="Instagram">
+            </a>
+
+            <a class="footer-social" href="https://github.com/rodrii-garciia" target="_blank">
+                <img src="./img/footer/github.png" alt="GitHub">
+            </a>
+        </div>
+
+        <p>©2026 PortafolioPersonal Rodrigo García</p>
+    </footer>
+</body>
+</html>

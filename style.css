@@ -1,0 +1,741 @@
+/* Fuentes importadas */
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("woff2-variations");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf") format("woff2-variations");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format("woff2-variations");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf") format("woff2-variations");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    --main-font: "Inter", "Roboto";
+    --white-font: white;
+    --accent-soft: #a0aeed;
+    --accent: #4c64d4;
+    --accent-hard: #091765;
+    --red-border: solid red 2px;
+}
+
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Esto se hace para usar la unidad relativa rem más adelante */
+html {
+    font-family: var(--main-font), serif;
+    font-size: 0.75vw; /* 0.75vw = 1rem */
+}
+
+/* Cuerpo principal de la web*/
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====== HEADER ====== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--accent-hard);
+
+    padding-left: 3rem;
+    height: 8vh;
+}
+
+.header-title {
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--white-font);
+}
+
+.header-title span {
+    font-weight: 700;
+}
+
+/* Navegación */
+.nav {
+    display: flex;
+}
+
+.nav-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--accent-hard);
+    border: none;
+    text-decoration: none;
+    color: var(--white-font);
+    transition: background-color 0.2s ease;
+
+    width: 8rem;
+    padding: 0.5rem;
+    height: 8vh;
+}
+
+.nav-item:hover{
+    background-color: var(--accent-soft);
+}
+
+.nav-item img{
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.nav-item span{
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+/* ====== MAIN ====== */
+main {
+    height: 85vh;
+    background-image:
+            linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            url("img/main/background-image.png");
+    background-size: cover;
+}
+
+/* 1 - Inicio */
+.hero {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    padding: 0 5rem;
+    height: 85vh;
+}
+
+.hero h1 {
+    color: var(--white-font);
+    font-size: 5rem;
+}
+
+.hero-h1-span {
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.hero h2 {
+    color: var(--white-font);
+    font-size: 2rem;
+}
+
+.hero h2 span {
+    text-decoration: underline;
+    color: var(--accent-soft);
+}
+
+.divLenguajes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    width: 66.6rem;
+}
+
+.lenguajes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 1.3rem;
+    background-color: var(--accent);
+
+    width: 16rem;
+}
+
+.lenguajes h3 {
+    color: var(--white-font);
+    font-weight: 800;
+    filter: drop-shadow(10px 10px 10px black);
+
+    margin-top: 1vh;
+    font-size: 1.5rem;
+}
+
+.lenguajes p {
+    color: var(--white-font);
+    font-weight: bold;
+    background-color: var(--accent-soft);
+
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    font-size: 1rem;
+    width: 13.3rem;
+    padding: 1vh;
+    border-radius: 0.66rem;
+    height: fit-content;
+}
+
+.lenguajes div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.66rem;
+    border: double 0.5vh var(--accent);
+    background-color: var(--accent-soft);
+
+    margin-top: 2vh;
+    width: 13.3rem;
+    height: 12vh;
+}
+
+.lenguajes img {
+    filter: drop-shadow(0.625rem 0.625rem 0.625rem black);
+    width: 6.6rem;
+}
+
+/* 2 - Sobre Mí */
+.sobreMi {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 85vh;
+}
+
+.sobreMi h2{
+    color: var(--white-font);
+    font-size: 4rem;
+}
+
+.divFotos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 120rem;
+    height: 70vh;
+}
+
+.divFotos article{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 38.6rem;
+
+    border-radius: 1.5rem;
+    background-color: var(--accent);
+    padding: 2.5rem;
+}
+
+.divFotos img{
+    width: 33.3rem;
+    height: 30vh;
+    border-radius: 1.5rem;
+}
+
+.divFotos h3{
+    text-align: center;
+    color: var(--white-font);
+    font-weight: 800;
+    filter: drop-shadow(10px 10px 10px black);
+    font-size: 3rem;
+}
+
+.divFotos textarea{
+    border-radius: 1.5rem;
+    width: 33.3rem;
+    height: 25vh;
+    padding: 2rem;
+    background-color: var(--accent-soft);
+    color: var(--white-font);
+    font-family: var(--main-font), serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    resize: none;
+}
+
+/* 3 - Proyectos */
+.proyectos {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 85vh;
+}
+
+.proyectos h2{
+    color: var(--white-font);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.proyectos p{
+    color: white;
+    margin-bottom: 1rem;
+    background-color: var(--accent-hard);
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.proyectos span{
+    font-weight: bold;
+}
+
+.listaProyectos{
+    display: grid;
+    grid-gap: 1rem;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 60vh;
+}
+
+.listaProyectos section{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.proyectos h3{
+    color: var(--white-font);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.proyectos img{
+    border-radius: 1.5rem;
+    height: 25vh;
+    width: 26.6rem;
+}
+
+/* 4 - Contacto */
+.contacto {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 85vh;
+}
+
+.contacto h2{
+    color: var(--white-font);
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.formularioContacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: var(--accent);
+    border-radius: 1.5rem;
+
+    margin-bottom: 2rem;
+    width: 30rem;
+    height: 60vh;
+}
+
+.labelContacto{
+    margin-top: 1rem;
+    color: var(--white-font);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+
+}
+
+.inputContacto{
+    background-color: var(--accent-soft);
+    border-radius: 1.2em;
+    border: none;
+    color: var(--white-font);
+    width: 26.6rem;
+    height: 4vh;
+    font-size: 1rem;
+    padding-left: 0.75rem;
+    text-align: left;
+}
+
+.inputContacto::placeholder{
+    color: var(--white-font);
+    align-items: flex-start;
+}
+
+.textArea{
+    height: 35vh;
+    font-family: var(--main-font), serif;
+    resize: none;
+    width: 19.3rem;
+}
+
+#btnEnviar{
+    background-color: var(--accent-hard);
+    border-radius: 1.2em;
+    border: none;
+    color: var(--white-font);
+    width: 26.6rem;
+    height: 8vh;
+    font-size: 1rem;
+    padding-left: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+#btnEnviar:hover{
+    background-color: var(--accent-soft);
+    border: solid 0.2rem var(--white-font);
+}
+
+#ventanaEmergente{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+
+    background-color: var(--accent-soft);
+    border-radius: 1.5rem;
+    padding: 2rem;
+
+    width: 33.3rem;
+    box-shadow: black 10px 10px 10px 10px;
+}
+
+#ventanaEmergente h2{
+    font-size: 1.7rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+#ventanaEmergente section{
+    text-align: left;
+    width: 29.3rem;
+    height: 40vh;
+    padding: 0.75rem;
+}
+
+#ventanaEmergente h3{
+    font-size: 1.2rem;
+    color: var(--accent-hard);
+    font-weight: 800;
+    margin-bottom: 1rem;
+
+}
+
+#ventanaEmergente label{
+    color: var(--accent-hard);
+    font-weight: 800;
+}
+
+#ventanaEmergente p{
+    color: var(--white-font);
+    margin-bottom: 0.5rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+#ventanaEmergente textarea{
+    background-color: var(--accent-soft);
+    color: var(--white-font);
+    height: 20vh;
+    width: 100%;
+    font-size: 1rem;
+    text-align: left;
+    font-family: var(--main-font), serif;
+    resize: none;
+    border: none;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    box-sizing: border-box;
+}
+
+#btnCerrar{
+    background-color: var(--accent-hard);
+    border-radius: 1.2em;
+    border: none;
+    color: var(--white-font);
+    width: 17.3rem;
+    height: 5vh;
+    font-size: 1rem;
+    padding-left: 0.75rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#btnCerrar:hover{
+    background-color: var(--accent-soft);
+    border: solid 0.2rem var(--white-font);
+}
+
+/* ====== FOOTER ====== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--accent-hard);
+
+    padding: 1rem 2rem;
+    height: 7vh;
+}
+
+footer p {
+    color: var(--white-font);
+    font-weight: bold;
+}
+
+.sectionSocial {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-social img {
+    width: 1.5rem;
+}
+
+/* ====== RESPONSIVIDAD ====== */
+
+/* Móviles grandes y tablets */
+@media(max-width: 1024px){
+
+    /* General */
+    html{
+        font-size: 1vw;
+    }
+
+    /* Header */
+    header {
+        flex-direction: column;
+        padding: 0;
+        height: 10vh;
+    }
+
+    .header-title {
+        margin-top: 1rem;
+        font-size: 2.5rem;
+    }
+
+    nav{
+        margin-top: 0;
+        height: 6vh;
+        width: 100%;
+    }
+
+    .nav-item {
+        height: 6vh;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .nav-item img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .nav-item span {
+        font-size: 2rem;
+    }
+
+    /* Inicio */
+    .divLenguajes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1rem;
+        width: 52rem;
+    }
+
+    .lenguajes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 1.3rem;
+        background-color: var(--accent);
+
+        width: 25rem;
+    }
+
+    .lenguajes p{
+        width: 23rem;
+    }
+
+    .lenguajes div{
+        width: 23rem;
+    }
+
+    /* Sobre Mí */
+    .sobreMi h2{
+        margin-bottom: 2rem;
+    }
+
+    .divFotos{
+        display: grid;
+        align-items: center;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+        width: 90rem;
+    }
+
+    .divFotos article{
+        align-items: center;
+        width: 90rem;
+    }
+
+    .divFotos img{
+        margin-top: 0.5rem;
+        height: 7vh;
+        width: 20rem;
+    }
+
+    .divFotos textarea{
+        height: 8vh;
+        width: 80rem;
+    }
+
+    /* Proyectos */
+    .listaProyectos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .listaProyectos section{
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .proyectos img{
+        height: 15vh;
+    }
+
+    /* Contacto */
+    .formularioContacto{
+        width: 35rem;
+        height: 50vh;
+    }
+
+    /* Footer */
+    footer{
+        height: 5vh;
+    }
+}
+
+@media(max-width: 480px) {
+
+    /* General */
+    html{
+        font-size: 1.5vw;
+    }
+
+    /* Inicio */
+    .hero h1{
+        width: 45rem;
+        text-align: center;
+    }
+
+    .divLenguajes {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 1rem;
+        width: 42rem;
+    }
+
+    .lenguajes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 1.3rem;
+        background-color: var(--accent);
+
+        width: 42rem;
+        height: 15vh;
+    }
+
+    .lenguajes p{
+        width: 37rem;
+    }
+
+    .lenguajes div{
+        width: 37rem;
+    }
+
+    /* Sobre Mí */
+    .sobreMi h2{
+        margin-bottom: 2rem;
+    }
+
+    .divFotos{
+        display: grid;
+        align-items: center;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+        width: 90vw;
+    }
+
+    .divFotos article{
+        align-items: center;
+        width: 90vw;
+    }
+
+    .divFotos img{
+        margin-top: 0.5rem;
+        height: 7vh;
+        width: 20rem;
+    }
+
+    .divFotos textarea{
+        height: 8vh;
+        width: 80vw;
+    }
+
+    /* Proyectos */
+    .proyectos p{
+        width: 45rem;
+        text-align: center;
+    }
+
+    /* Contacto */
+    .formularioContacto{
+        width: 35rem;
+        height: 30vh;
+    }
+}
